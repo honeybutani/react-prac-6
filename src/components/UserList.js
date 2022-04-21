@@ -28,7 +28,7 @@ const UserList = (props) => {
 
   useEffect(
     () => Dispatch(setUsers(currentPage, pageUpdated_data)),
-    [currentPage, pageUpdated_data]
+    [currentPage, pageUpdated_data ,Dispatch]
   );
 
   return (
@@ -58,6 +58,7 @@ const UserList = (props) => {
                           src={user.avatar}
                           width="50"
                           height="50"
+                          alt ="not display"
                         ></img>
                         <div className="username">
                           {user.first_name + " " + user.last_name} <br></br>{" "}
@@ -67,7 +68,7 @@ const UserList = (props) => {
                     </td>
 
                     <td>
-                      {user.id == 1 ? (
+                      {user.id === 1 ? (
                         <div className="activeclass">Active</div>
                       ) : (
                         <select className="dropdwonactive">
@@ -77,7 +78,7 @@ const UserList = (props) => {
                       )}
                     </td>
                     <td>
-                      {user.id == 1 ? (
+                      {user.id === 1 ? (
                         <div className="ownerclass">Owner</div>
                       ) : (
                         <select className="dropdwonrole">
@@ -88,7 +89,7 @@ const UserList = (props) => {
                     </td>
 
                     <td>
-                      {user.id == 1 ? (
+                      {user.id === 1 ? (
                         <i className="locksymbol">
                           <Lock />
                         </i>
@@ -102,7 +103,7 @@ const UserList = (props) => {
                 ))}
             </tbody>
           </table>
-          {loading == true ? (
+          {loading === true ? (
             <div className="loadingmsg">Loading.....</div>
           ) : error ? (
             <div className="errormsg"> Oops Something went wrong</div>
