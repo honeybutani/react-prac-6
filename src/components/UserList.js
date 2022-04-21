@@ -38,7 +38,7 @@ const UserList = (props) => {
           <table className="table table-borderless table-responsive  ">
             <thead>
               <tr>
-                <th>Name</th>
+                <th style={{minWidth:'350px'}}>Name</th>
                 <th>Status</th>
                 <th>Access</th>
               </tr>
