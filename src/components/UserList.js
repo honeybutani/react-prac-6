@@ -37,10 +37,10 @@ const UserList = (props) => {
         <div className="container-table">
           <table className="table table-borderless table-responsive  ">
             <thead>
-              <tr>
-                <th style={{minWidth:'350px'}}>Name</th>
-                <th>Status</th>
-                <th>Access</th>
+              <tr className="heading">
+                <th style={{minWidth:'360px'}} >Name</th>
+                <th style={{minWidth:'130px'}}>Status</th>
+                <th style={{minWidth:'130px'}}>Access</th>
               </tr>
             </thead>
             <tbody>
